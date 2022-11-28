@@ -16714,3 +16714,15 @@ img {
 .no-cursor {
   cursor: not-allowed;
 }
+
+.col-new {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.img-fit {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}

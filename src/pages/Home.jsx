@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import BrowseByCategory from "../components/home/BrowseByCategory";
 import HotCollections from "../components/home/HotCollections";
@@ -7,6 +8,7 @@ import NewItems from "../components/home/NewItems";
 import TopSellers from "../components/home/TopSellers";
 
 const Home = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
