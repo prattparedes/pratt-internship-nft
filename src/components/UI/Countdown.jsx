@@ -8,6 +8,7 @@ function Countdown({ date }) {
   const [seconds, setSeconds] = useState();
 
   useEffect(() => {
+    updateTimer()
     let intervalId = setInterval(() => updateTimer(), 1000);
 
     return () => {
