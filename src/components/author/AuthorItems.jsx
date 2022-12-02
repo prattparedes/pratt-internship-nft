@@ -1,8 +1,5 @@
 import React from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
-import nftImage from "../../images/nftImage.jpg";
 import Skeleton from "../UI/Skeleton";
 
 const AuthorItems = ({data, loading}) => {
@@ -115,7 +112,7 @@ const AuthorItems = ({data, loading}) => {
                       </div>
                     </div>
                   </div>
-                  <Link to={`/items-details/${item.nftId}`}>
+                  <Link to={`/item-details/${item.nftId}`}>
                     <img
                       src={item.nftImage}
                       className="lazy nft__item_preview"
@@ -124,7 +121,7 @@ const AuthorItems = ({data, loading}) => {
                   </Link>
                 </div>
                 <div className="nft__item_info">
-                  <Link to={`/items-details/${item.nftId}`}>
+                  <Link to={`/item-details/${item.nftId}`}>
                     <h4>{item.title}</h4>
                   </Link>
                   <div className="nft__item_price">{item.price} ETH</div>
