@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import Skeleton from "../UI/Skeleton";
 import Countdown from "../UI/Countdown";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const NewItems = () => {
+  AOS.init()
   const [newItems, setNewItems] = useState([]);
   const [loading, setLoading] = useState();
 
@@ -49,7 +52,7 @@ const NewItems = () => {
 
   return (
     <section id="section-items" className="no-bottom">
-      <div className="container">
+      <div className="container" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease-in-sine">
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
