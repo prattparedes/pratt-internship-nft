@@ -3,10 +3,12 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
 import Skeleton from "../UI/Skeleton";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const TopSellers = () => {
+  AOS.init()
   const [sellers, setSellers] = useState([]);
   const [loading, setLoading] = useState();
 
@@ -25,7 +27,7 @@ const TopSellers = () => {
 
   return (
     <section id="section-popular" className="pb-5">
-      <div className="container">
+      <div className="container" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease-in-sine">
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">

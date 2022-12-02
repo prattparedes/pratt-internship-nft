@@ -5,8 +5,12 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import Skeleton from "../UI/Skeleton";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
 
 const HotCollections = () => {
+  AOS.init()
   const [collections, setCollections] = useState([]);
   const [loading, setLoading] = useState();
 
@@ -50,7 +54,7 @@ const HotCollections = () => {
 
   return (
     <section id="section-collections" className="no-bottom">
-      <div className="container">
+      <div className="container" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-offset="0" data-aos-easing="ease-in-sine">
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
